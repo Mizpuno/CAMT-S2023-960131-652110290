@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+
+        .header-container {
+            position: relative;
+            width: 100%;
+            height: 100px;
+        }
+        
+        .header-container > img {
+            position: absolute;
+            top: 25%;
+            left: 20px;
+            width: 150px;
+            height: auto;
+        }
+
+        .catalog-container {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            height: auto;
+
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .sign-picture {
+            width: 100%;
+            height: 10vh;
+        }
+
+        .sign-container {
+            width: fit-content; 
+            margin: 15px auto;
+        }
+
+        .sign-container > p {
+            display: inline;
+            text-align: center;
+            font-weight: bold;
+            font-size: 35px;
+            color: blue;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .flex-container > div {
+            border-radius: 15px;
+            width: 220px;
+            height: 350px;
+            margin: 5px;
+        }
+
+        .content-container {
+            position: relative;
+        }
+
+        .picture-side {
+            position: relative;
+            height: 50%;
+        }
+
+        .picture-side > img {
+            border-radius: 15px 15px 0 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-side {
+            background-color: white;
+            border-radius: 0 0 15px 15px;
+            height: 50%;
+        }
+
+        .description {padding: 15px 10px;}
+        .cost {
+            padding: 20px 10px 2px 10px;
+            color: red;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .discount {
+            padding: 0 10px 15px 10px;
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header of Lazada -->
+    <section class="header-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Lazada_%282019%29.svg/1454px-Lazada_%282019%29.svg.png"> 
+    </section>
+
+    <section class="catalog-container">
+        <div class="sign-picture">
+            <div class="sign-container">
+                <img src="./heart.png" width="45px" height="45px">
+                <p>Just For You</p>
+                <img src="./heart.png" width="45px" height="45px">
+            </div>    
+        </div>
+        <div class="flex-container">
+
+            <div class="content-container">
+                <div class="picture-side">
+                    <img src="https://lzd-img-global.slatic.net/g/p/d87d72653a4a5674714015e1f4cacb48.jpg_400x400q80.jpg_.webp">
+                </div>
+                <div class="content-side">
+                    <p class="description">นม ยูเอชที เอนฟา โกร เอพลัส สูตร 3 ซุพีเรียร์ รสจืด 180มล.</p>
+                    <p class="cost">฿972.00</p>
+                    <span class="discount">1,216.00</span><span>-20%</span>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="picture-side">
+                    <img src="https://lzd-img-global.slatic.net/g/p/0cdb2c4f30fabe2a4afd4b78a5ea426d.jpg_400x400q80.jpg_.webp">
+                </div>
+                <div class="content-side">
+                    <p class="description">ชุดเสื้อกล้ามเด็ก เสื้อเด็กเสื้อผ้าเด็ก 2 ชิ้น </p>
+                    <p class="cost">฿49.00</p>
+                    <span class="discount">฿79.00</span><span>-38%</span>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="picture-side">
+                    <img src="https://lzd-img-global.slatic.net/g/ff/kf/S02ef6377282c455b9091f4faf643a719i.jpg_720x720q80.jpg_.webp">
+                </div>
+                <div class="content-side">
+                    <p class="description">BLACK สีดำ กางเกงกีฬา เลือกเบอร์ได้ กางเกงกีฬา</p>
+                    <p class="cost">฿8.00</p>
+                    <span class="discount">฿25.00</span><span>-68%</span>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="picture-side">
+                    <img src="https://lzd-img-global.slatic.net/g/p/1760f925e690e7bb94e08fe7fd9b6ea5.jpg_400x400q80.jpg_.webp">
+                </div>
+                <div class="content-side">
+                    <p class="description">[ยกลัง! ส่งฟรี] Sunny Baby Ultra Slim</p>
+                    <p class="cost">฿687.00</p>
+                    <span class="discount">฿1,198.00</span><span>-43%</span>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="picture-side">
+                    <img src="https://lzd-img-global.slatic.net/g/p/cc9e03759941791f3b404159109899fe.jpg_400x400q80.jpg_.webp">
+                </div>
+                <div class="content-side">
+                    <p class="description">ชุดเด็กลายดอก วันสงกรางต์ สีสดใส ราคามิตรภาพ </p>
+                    <p class="cost">฿62.27</p>
+                    <span class="discount">฿109.00</span><span>-43%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
