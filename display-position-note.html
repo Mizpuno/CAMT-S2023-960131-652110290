@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+
+        h1, h2, h3 {margin: 25px 0;}
+    </style>
+</head>
+
+<body>
+    <!--  Box model design -->
+    <div>
+        <h1>Box Model</h1>
+        <div style="
+            border: 1px dotted black;
+            padding: 20px;
+        ">
+            <div style="
+                background: red;
+                border: 30px solid pink;
+                padding: 30px;
+            ">
+                <div style="
+                    background: green;
+                    border: 30px solid orange;
+                ">
+                    box model
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Css Display design -->
+    <div>
+        <h1>Css Display</h1>
+        <h3>inline</h3>
+        <div style="
+            border: 1px dotted black;
+            padding: 10px;
+            width: fit-content;
+        ">
+            <span style="background: yellow;">inline text1</span>
+            <span style="background: orange;">inline text2</span>
+            <span style="background: red;">inline text3</span>
+            <span style="background: green;">inline text4</span>
+            <span style="background: purple;">inline text5</span>
+        </div>
+    </div>
+
+    <!-- Block-->
+    <div>
+        <h3>block</h3>
+        <div style="
+            border: 1px dotted black;
+            padding: 10px;
+        ">
+            <p style="background: yellow;">block text1</p>
+            <p style="background: orange;">block text2</p>
+            <p style="background: red;">block text3</p>
+            <p style="background: green;">block text4</p>
+            <p style="background: purple;">block text5</p>
+        </div>
+    </div>
+
+    <!-- inline block -->
+    <div>
+        <h3>inline-block</h3>
+        <div style="
+            border: 1px dotted black;
+            padding: 10px;
+        ">
+            <p style="display: inline-block">apple</p>
+            <p style="display: inline-block">orange</p>
+            <p style="display: inline-block">mango</p>
+            <p style="display: inline-block">watermelon</p>
+        </div>
+    </div>
+
+    <!-- none -->
+    <div>
+        <h3>none</h3>
+        <div style="
+            border: 1px dotted black;
+            padding: 10px;
+        ">
+            <p style="display: inline-block;">apple</p>
+            <p style="display: inline-block;">orange</p>
+            <p style="display: none;">mango</p>
+            <p style="display: inline-block;">watermelon</p>
+        </div>
+    </div>
+
+        <!-- none vs visibility-->
+    <div>
+        <h3>display: none vs visibility: hidden</h3>
+        <div style="
+            border: 1px dotted black;
+            padding: 10px;
+        ">
+            <p style="display: inline-block;">apple</p>
+            <p style="display: inline-block;">orange</p>
+            <p style="display: inline-block; visibility: hidden;">mango</p>
+            <p style="display: inline-block;">watermelon</p>
+        </div>
+    </div>
+
+    <!-- css position -->
+    <div>
+        <h1>Css Position</h1>
+        <h1>Static</h1>
+        <div style="
+            border: 1px dotted black;
+            padding: 20px;
+        ">
+            <div style="
+            position: static;
+            background: pink;
+            opacity: 70%;
+            border: 1px solid red;
+            width: 150px;
+            height: 150px;
+            ">
+            </div>
+        </div>
+    </div>
+
+        <!-- css position -->
+    <div>
+        <h1>absolute</h1>
+        <h2>fixed width/height</h2>
+        <div style="
+            border: 1px dotted black;
+            padding: 20px;
+        ">
+            <div style="
+            position: absolute;
+            background: pink;
+            opacity: 70%;
+            border: 1px solid red;
+            width: 150px;
+            height: 150px;
+            ">
+            </div>
+        </div>
+
+        <h2>no width/height</h2>
+        <div style="
+            border: 1px dotted black;
+            padding: 20px;
+        ">
+            <div style="
+            width: 100%;
+            position: absolute;
+            background: pink;
+            opacity: 70%;
+            border: 2px solid red;
+            ">
+            </div>
+        </div>    
+        
+        <h2>fixed width/height + right top up</h2>
+        <div style="
+            border: 1px dotted black;
+            padding: 20px;
+        ">
+            <div style="
+            border: 1px solid black;
+            background: white;
+            height: 300px;
+            ">
+                <div style="
+                    position: absolute;
+                    background: gray;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    right: 25px;
+                ">
+                    <p style="
+                        text-align: center;
+                        margin: 15px auto;    
+                        color: white;
+                    ">X</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="
+        position: fixed;
+        background: rgba(0,0,0, 0.3);
+        width: 100%;
+        height: 100%;
+        top: 0;
+    ">
+
+        <div style="
+                position: fixed;
+                background: white; 
+                width: 350px;
+                height: 150px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+        ">
+            <h1 style="
+                text-align: center;
+                margin: 50px auto;
+            ">Songkran festival 2023</h1>
+        </div>
+    </div>
+</body>
+</html>
