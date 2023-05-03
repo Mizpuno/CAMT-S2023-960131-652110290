@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content-container {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            width: 1080px;
+            height: fit-content;
+
+            border: 1px solid gray;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: 550px;
+            background: green;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            margin: auto 10px;
+            height: 400px;
+            width: 220px;
+            border-radius: 15px;
+            border: 0px;
+            background-color: white;
+        }
+        
+
+        .card-type > p {
+            margin: 5px 15px;
+            width: fit-content;
+            font-size: 60px;
+        }
+
+        .card-number > p {
+            margin: 80px auto;
+            width: fit-content;
+            font-size: 60px;
+        }
+
+        .submit-button {
+            width: 100%;
+            margin: 25px auto;
+
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <div class="flex-container">
+            <div class="flex-content">
+                <div class="card-content">
+                    <div class="card-type"></div>
+                    <div class="card-number"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-type"></div>
+                    <div class="card-number"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-type"></div>
+                    <div class="card-number"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-type"></div>
+                    <div class="card-number"></div>
+                </div>
+            </div>
+            <button class="submit-button" id="button">Submit Button</button> 
+        </div>
+    </div>
+</body>
+
+<script>
+    // card number and type
+    var CARD_TYPE = ['♣', '♦', '♥', '♠']
+    var CARD_NUMBER = ['A', '1', '2', '3', '4', '5', '6',' 7', '8', '9', '10', 'J', 'Q', 'K']
+
+    // random function
+    // max: number > 0
+    // return [0, max -1]
+    function random(max) {
+        return parseInt(Math.random() * max) % max
+    }
+
+    var element = document.getElementById('card-content');
+
+    const button = document.getElementById('button');
+    button.addEventListener('click', random_card);
+
+    const card_content = document.querySelectorAll('.card-content');
+    const card_type = document.querySelectorAll('.card-type');
+    const card_number = document.querySelectorAll('.card-number');
+    
+
+    function inspect(item, index) {
+        console.log(item, " in ", index);
+        }
+
+    function random_card() {
+        // how to use random function
+        Array.from(card_content).forEach(function(val, idx) {
+            var cardType = CARD_TYPE[random(CARD_TYPE.length)]
+            var cardNumber = CARD_NUMBER[random(CARD_NUMBER.length)]
+            console.log(cardType, cardNumber)
+
+            card_content[idx].style.border = '5px solid black';
+
+            card_type[idx].innerHTML = "<p>" + cardType + "<\p>";
+            card_type[idx].querySelector('p').style.color = 'black';
+
+            card_number[idx].innerHTML = "<p>" + cardNumber + "</p>";
+            card_number[idx].querySelector('p').style.color = 'black';
+
+            if (cardType == '♦' || cardType == '♥') {
+                card_content[idx].style.border = '5px solid red';
+                card_type[idx].querySelector('p').style.color = 'red';
+                card_number[idx].querySelector('p').style.color = 'red';
+            }
+        });
+    }
+
+
+
+
+</script>
+</html>
